@@ -35,10 +35,10 @@
 					"enableStaging": true,
 					"stagingSettings": {
 						"linkedServiceName": {
-							"referenceName": "snowflake",
+							"referenceName": "AzureDataLakeStorage1",
 							"type": "LinkedServiceReference"
 						},
-						"path": "snowflakecontainer"
+						"path": "karthiccontainer/stagingsnowflake"
 					},
 					"translator": {
 						"type": "TabularTranslator",
