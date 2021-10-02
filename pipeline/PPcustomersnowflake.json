@@ -38,7 +38,7 @@
 							"referenceName": "AzureDataLakeStorage1",
 							"type": "LinkedServiceReference"
 						},
-						"path": "karthiccontainer/stagingsnowflake"
+						"path": "snowflakecontainer/snowflakeDir"
 					},
 					"translator": {
 						"type": "TabularTranslator",
