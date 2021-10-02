@@ -32,7 +32,14 @@
 							"type": "SnowflakeImportCopyCommand"
 						}
 					},
-					"enableStaging": false,
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "AzureDataLakeStorage1",
+							"type": "LinkedServiceReference"
+						},
+						"path": "karthiccontainer/stagingsnowflake"
+					},
 					"translator": {
 						"type": "TabularTranslator",
 						"mappings": [
