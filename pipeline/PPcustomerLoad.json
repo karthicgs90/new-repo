@@ -118,8 +118,8 @@
 								},
 								"sink": {
 									"name": "NameStyle",
-									"type": "Boolean",
-									"physicalType": "bit"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
@@ -129,8 +129,8 @@
 								},
 								"sink": {
 									"name": "BirthDate",
-									"type": "DateTime",
-									"physicalType": "date"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
@@ -185,9 +185,9 @@
 								"sink": {
 									"name": "YearlyIncome",
 									"type": "Decimal",
-									"physicalType": "money",
-									"scale": 4,
-									"precision": 19
+									"physicalType": "decimal",
+									"scale": 0,
+									"precision": 18
 								}
 							},
 							{
@@ -340,8 +340,8 @@
 								},
 								"sink": {
 									"name": "DateFirstPurchase",
-									"type": "DateTime",
-									"physicalType": "date"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
