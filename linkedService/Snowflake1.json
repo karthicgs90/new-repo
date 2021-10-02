@@ -1,0 +1,12 @@
+{
+	"name": "Snowflake1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "Snowflake",
+		"typeProperties": {
+			"connectionString": "jdbc:snowflake://kj32016.east-us-2.azure.snowflakecomputing.com/?user=karthicgs90&db=ADVENTURERAW&warehouse=COMPUTE_WH&role=SYSADMIN",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIktBUlRISUMtREZfODU0ZDZhZDMtMjNkZS00YzNiLWE4MDYtYzlmMTI0NDA5NzUxIg0KfQ=="
+		}
+	}
+}
