@@ -800,7 +800,14 @@
 							"type": "SnowflakeImportCopyCommand"
 						}
 					},
-					"enableStaging": false,
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "SnowFlakeAzureBlobStorage1",
+							"type": "LinkedServiceReference"
+						},
+						"path": "snowflakeblob"
+					},
 					"translator": {
 						"type": "TabularTranslator",
 						"mappings": [
