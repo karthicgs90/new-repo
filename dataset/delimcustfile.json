@@ -1,5 +1,5 @@
 {
-	"name": "Delimcustfile",
+	"name": "delimcustfile",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "SnowFlakeAzureBlobStorage1",
