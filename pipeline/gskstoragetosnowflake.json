@@ -1191,7 +1191,14 @@
 							"type": "SnowflakeImportCopyCommand"
 						}
 					},
-					"enableStaging": false,
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "SnowFlakeAzureBlobStorage1",
+							"type": "LinkedServiceReference"
+						},
+						"path": "snowflakeblob"
+					},
 					"translator": {
 						"type": "TabularTranslator",
 						"mappings": [
@@ -1206,150 +1213,250 @@
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 2
+								},
 								"sink": {
 									"name": "ORDERDATEKEY",
 									"type": "Int64"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 3
+								},
 								"sink": {
 									"name": "DUEDATEKEY",
 									"type": "Int64"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 4
+								},
 								"sink": {
 									"name": "SHIPDATEKEY",
 									"type": "Int64"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 5
+								},
 								"sink": {
 									"name": "CUSTOMERKEY",
 									"type": "Int64"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 6
+								},
 								"sink": {
 									"name": "PROMOTIONKEY",
 									"type": "Int64"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 7
+								},
 								"sink": {
 									"name": "CURRENCYKEY",
 									"type": "Int64"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 8
+								},
 								"sink": {
 									"name": "SALESTERRITORYKEY",
 									"type": "Int64"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 9
+								},
 								"sink": {
 									"name": "SALESORDERNUMBER",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 10
+								},
 								"sink": {
 									"name": "SALESORDERLINENUMBER",
 									"type": "Int64"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 11
+								},
 								"sink": {
 									"name": "REVISIONNUMBER",
 									"type": "Int64"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 12
+								},
 								"sink": {
 									"name": "ORDERQUANTITY",
 									"type": "Int64"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 13
+								},
 								"sink": {
 									"name": "UNITPRICE",
 									"type": "Int64"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 14
+								},
 								"sink": {
 									"name": "EXTENDEDAMOUNT",
 									"type": "Int64"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 15
+								},
 								"sink": {
 									"name": "UNITPRICEDISCOUNTPCT",
 									"type": "Double"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 16
+								},
 								"sink": {
 									"name": "DISCOUNTAMOUNT",
 									"type": "Double"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 17
+								},
 								"sink": {
 									"name": "PRODUCTSTANDARDCOST",
 									"type": "Int64"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 18
+								},
 								"sink": {
 									"name": "TOTALPRODUCTCOST",
 									"type": "Int64"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 19
+								},
 								"sink": {
 									"name": "SALESAMOUNT",
 									"type": "Int64"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 20
+								},
 								"sink": {
 									"name": "TAXAMT",
 									"type": "Int64"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 21
+								},
 								"sink": {
 									"name": "FREIGHT",
 									"type": "Int64"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 22
+								},
 								"sink": {
 									"name": "CARRIERTRACKINGNUMBER",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 23
+								},
 								"sink": {
 									"name": "CUSTOMERPONUMBER",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 24
+								},
 								"sink": {
 									"name": "ORDERDATE",
 									"type": "DateTime"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 25
+								},
 								"sink": {
 									"name": "DUEDATE",
 									"type": "DateTime"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 26
+								},
 								"sink": {
 									"name": "SHIPDATE",
 									"type": "DateTime"
