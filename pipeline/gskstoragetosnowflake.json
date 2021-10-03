@@ -1,6 +1,241 @@
 {
 	"name": "gskstoragetosnowflake",
 	"properties": {
+		"activities": [
+			{
+				"name": "copy storage to snowflake",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"additionalColumns": [
+							{
+								"value": "$$FILEPATH"
+							}
+						],
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "SnowflakeSink",
+						"importSettings": {
+							"type": "SnowflakeImportCopyCommand"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 1
+								},
+								"sink": {
+									"name": "CUSTOMERKEY",
+									"type": "Int64"
+								}
+							},
+							{
+								"sink": {
+									"name": "GEOGRAPHYKEY",
+									"type": "Int64"
+								}
+							},
+							{
+								"sink": {
+									"name": "CUSTOMERALTERNATEKEY",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "TITLE",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "FIRSTNAME",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "MIDDLENAME",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "LASTNAME",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "NAMESTYLE",
+									"type": "Boolean"
+								}
+							},
+							{
+								"sink": {
+									"name": "BIRTHDATE",
+									"type": "DateTime"
+								}
+							},
+							{
+								"sink": {
+									"name": "MARITALSTATUS",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "SUFFIX",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "GENDER",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "EMAILADDRESS",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "YEARLYINCOME",
+									"type": "Int64"
+								}
+							},
+							{
+								"sink": {
+									"name": "TOTALCHILDREN",
+									"type": "Int64"
+								}
+							},
+							{
+								"sink": {
+									"name": "NUMBERCHILDRENATHOME",
+									"type": "Int64"
+								}
+							},
+							{
+								"sink": {
+									"name": "ENGLISHEDUCATION",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "SPANISHEDUCATION",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "FRENCHEDUCATION",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "ENGLISHOCCUPATION",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "SPANISHOCCUPATION",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "FRENCHOCCUPATION",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "HOUSEOWNERFLAG",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "NUMBERCARSOWNED",
+									"type": "Int64"
+								}
+							},
+							{
+								"sink": {
+									"name": "ADDRESSLINE1",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "ADDRESSLINE2",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "PHONE",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "DATEFIRSTPURCHASE",
+									"type": "DateTime"
+								}
+							},
+							{
+								"sink": {
+									"name": "COMMUTEDISTANCE",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DelimitedText01",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "CustomerSnowDS",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
 		"folder": {
 			"name": "snowflakedb"
 		},
