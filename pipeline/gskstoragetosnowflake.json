@@ -1174,8 +1174,202 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"enableStaging": false
-				}
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "SnowflakeSink",
+						"importSettings": {
+							"type": "SnowflakeImportCopyCommand"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 1
+								},
+								"sink": {
+									"name": "PRODUCTKEY",
+									"type": "Int64"
+								}
+							},
+							{
+								"sink": {
+									"name": "ORDERDATEKEY",
+									"type": "Int64"
+								}
+							},
+							{
+								"sink": {
+									"name": "DUEDATEKEY",
+									"type": "Int64"
+								}
+							},
+							{
+								"sink": {
+									"name": "SHIPDATEKEY",
+									"type": "Int64"
+								}
+							},
+							{
+								"sink": {
+									"name": "CUSTOMERKEY",
+									"type": "Int64"
+								}
+							},
+							{
+								"sink": {
+									"name": "PROMOTIONKEY",
+									"type": "Int64"
+								}
+							},
+							{
+								"sink": {
+									"name": "CURRENCYKEY",
+									"type": "Int64"
+								}
+							},
+							{
+								"sink": {
+									"name": "SALESTERRITORYKEY",
+									"type": "Int64"
+								}
+							},
+							{
+								"sink": {
+									"name": "SALESORDERNUMBER",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "SALESORDERLINENUMBER",
+									"type": "Int64"
+								}
+							},
+							{
+								"sink": {
+									"name": "REVISIONNUMBER",
+									"type": "Int64"
+								}
+							},
+							{
+								"sink": {
+									"name": "ORDERQUANTITY",
+									"type": "Int64"
+								}
+							},
+							{
+								"sink": {
+									"name": "UNITPRICE",
+									"type": "Int64"
+								}
+							},
+							{
+								"sink": {
+									"name": "EXTENDEDAMOUNT",
+									"type": "Int64"
+								}
+							},
+							{
+								"sink": {
+									"name": "UNITPRICEDISCOUNTPCT",
+									"type": "Double"
+								}
+							},
+							{
+								"sink": {
+									"name": "DISCOUNTAMOUNT",
+									"type": "Double"
+								}
+							},
+							{
+								"sink": {
+									"name": "PRODUCTSTANDARDCOST",
+									"type": "Int64"
+								}
+							},
+							{
+								"sink": {
+									"name": "TOTALPRODUCTCOST",
+									"type": "Int64"
+								}
+							},
+							{
+								"sink": {
+									"name": "SALESAMOUNT",
+									"type": "Int64"
+								}
+							},
+							{
+								"sink": {
+									"name": "TAXAMT",
+									"type": "Int64"
+								}
+							},
+							{
+								"sink": {
+									"name": "FREIGHT",
+									"type": "Int64"
+								}
+							},
+							{
+								"sink": {
+									"name": "CARRIERTRACKINGNUMBER",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "CUSTOMERPONUMBER",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "ORDERDATE",
+									"type": "DateTime"
+								}
+							},
+							{
+								"sink": {
+									"name": "DUEDATE",
+									"type": "DateTime"
+								}
+							},
+							{
+								"sink": {
+									"name": "SHIPDATE",
+									"type": "DateTime"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DelimiFactInternetSalesDS",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "SnowflakeFactInternetSalestableDS",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"folder": {
