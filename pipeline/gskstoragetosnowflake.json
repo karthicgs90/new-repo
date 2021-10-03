@@ -1,0 +1,9 @@
+{
+	"name": "gskstoragetosnowflake",
+	"properties": {
+		"folder": {
+			"name": "snowflakedb"
+		},
+		"annotations": []
+	}
+}
