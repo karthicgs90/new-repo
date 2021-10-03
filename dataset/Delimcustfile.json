@@ -1,0 +1,26 @@
+{
+	"name": "Delimcustfile",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SnowFlakeAzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "DimCustomer.csv",
+				"container": "snowflakeblob"
+			},
+			"columnDelimiter": "|",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"type": "String"
+			}
+		]
+	}
+}
