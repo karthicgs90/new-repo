@@ -28,6 +28,10 @@
 					},
 					"sink": {
 						"type": "SnowflakeSink",
+						"preCopyScript": {
+							"value": "truncate table dbo.dimcustomer",
+							"type": "Expression"
+						},
 						"importSettings": {
 							"type": "SnowflakeImportCopyCommand"
 						}
