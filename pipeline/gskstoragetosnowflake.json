@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "copy storage to snowflake",
+				"name": "Copy data1",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -17,11 +17,6 @@
 				"typeProperties": {
 					"source": {
 						"type": "DelimitedTextSource",
-						"additionalColumns": [
-							{
-								"value": "$$FILEPATH"
-							}
-						],
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
 							"recursive": true,
@@ -37,7 +32,14 @@
 							"type": "SnowflakeImportCopyCommand"
 						}
 					},
-					"enableStaging": false,
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "SnowFlakeAzureBlobStorage1",
+							"type": "LinkedServiceReference"
+						},
+						"path": "snowflakeblob"
+					},
 					"translator": {
 						"type": "TabularTranslator",
 						"mappings": [
@@ -52,168 +54,280 @@
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 2
+								},
 								"sink": {
 									"name": "GEOGRAPHYKEY",
 									"type": "Int64"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 3
+								},
 								"sink": {
 									"name": "CUSTOMERALTERNATEKEY",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 4
+								},
 								"sink": {
 									"name": "TITLE",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 5
+								},
 								"sink": {
 									"name": "FIRSTNAME",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 6
+								},
 								"sink": {
 									"name": "MIDDLENAME",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 7
+								},
 								"sink": {
 									"name": "LASTNAME",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 8
+								},
 								"sink": {
 									"name": "NAMESTYLE",
 									"type": "Boolean"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 9
+								},
 								"sink": {
 									"name": "BIRTHDATE",
 									"type": "DateTime"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 10
+								},
 								"sink": {
 									"name": "MARITALSTATUS",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 11
+								},
 								"sink": {
 									"name": "SUFFIX",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 12
+								},
 								"sink": {
 									"name": "GENDER",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 13
+								},
 								"sink": {
 									"name": "EMAILADDRESS",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 14
+								},
 								"sink": {
 									"name": "YEARLYINCOME",
 									"type": "Int64"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 15
+								},
 								"sink": {
 									"name": "TOTALCHILDREN",
 									"type": "Int64"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 16
+								},
 								"sink": {
 									"name": "NUMBERCHILDRENATHOME",
 									"type": "Int64"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 17
+								},
 								"sink": {
 									"name": "ENGLISHEDUCATION",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 18
+								},
 								"sink": {
 									"name": "SPANISHEDUCATION",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 19
+								},
 								"sink": {
 									"name": "FRENCHEDUCATION",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 20
+								},
 								"sink": {
 									"name": "ENGLISHOCCUPATION",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 21
+								},
 								"sink": {
 									"name": "SPANISHOCCUPATION",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 22
+								},
 								"sink": {
 									"name": "FRENCHOCCUPATION",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 23
+								},
 								"sink": {
 									"name": "HOUSEOWNERFLAG",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 24
+								},
 								"sink": {
 									"name": "NUMBERCARSOWNED",
 									"type": "Int64"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 25
+								},
 								"sink": {
 									"name": "ADDRESSLINE1",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 26
+								},
 								"sink": {
 									"name": "ADDRESSLINE2",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 27
+								},
 								"sink": {
 									"name": "PHONE",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 28
+								},
 								"sink": {
 									"name": "DATEFIRSTPURCHASE",
 									"type": "DateTime"
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 29
+								},
 								"sink": {
 									"name": "COMMUTEDISTANCE",
 									"type": "String"
