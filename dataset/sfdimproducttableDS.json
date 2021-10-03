@@ -1,0 +1,233 @@
+{
+	"name": "sfdimproducttableDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Snowflake1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeTable",
+		"schema": [
+			{
+				"name": "PRODUCTKEY",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "PRODUCTALTERNATEKEY",
+				"type": "VARCHAR",
+				"precision": 25,
+				"scale": 0
+			},
+			{
+				"name": "PRODUCTSUBCATEGORYKEY",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "WEIGHTUNITMEASURECODE",
+				"type": "VARCHAR",
+				"precision": 3,
+				"scale": 0
+			},
+			{
+				"name": "SIZEUNITMEASURECODE",
+				"type": "VARCHAR",
+				"precision": 3,
+				"scale": 0
+			},
+			{
+				"name": "ENGLISHPRODUCTNAME",
+				"type": "VARCHAR",
+				"precision": 50,
+				"scale": 0
+			},
+			{
+				"name": "SPANISHPRODUCTNAME",
+				"type": "VARCHAR",
+				"precision": 50,
+				"scale": 0
+			},
+			{
+				"name": "FRENCHPRODUCTNAME",
+				"type": "VARCHAR",
+				"precision": 50,
+				"scale": 0
+			},
+			{
+				"name": "STANDARDCOST",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "FINISHEDGOODSFLAG",
+				"type": "BINARY",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "COLOR",
+				"type": "VARCHAR",
+				"precision": 15,
+				"scale": 0
+			},
+			{
+				"name": "SAFETYSTOCKLEVEL",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "REORDERPOINT",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "LISTPRICE",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "SIZE",
+				"type": "VARCHAR",
+				"precision": 50,
+				"scale": 0
+			},
+			{
+				"name": "SIZERANGE",
+				"type": "VARCHAR",
+				"precision": 50,
+				"scale": 0
+			},
+			{
+				"name": "WEIGHT",
+				"type": "FLOAT",
+				"precision": 15,
+				"scale": 0
+			},
+			{
+				"name": "DAYSTOMANUFACTURE",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "PRODUCTLINE",
+				"type": "VARCHAR",
+				"precision": 2,
+				"scale": 0
+			},
+			{
+				"name": "DEALERPRICE",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "CLASS",
+				"type": "VARCHAR",
+				"precision": 2,
+				"scale": 0
+			},
+			{
+				"name": "STYLE",
+				"type": "VARCHAR",
+				"precision": 2,
+				"scale": 0
+			},
+			{
+				"name": "MODELNAME",
+				"type": "VARCHAR",
+				"precision": 50,
+				"scale": 0
+			},
+			{
+				"name": "LARGEPHOTO",
+				"type": "BINARY",
+				"precision": 64,
+				"scale": 0
+			},
+			{
+				"name": "ENGLISHDESCRIPTION",
+				"type": "VARCHAR",
+				"precision": 144,
+				"scale": 0
+			},
+			{
+				"name": "FRENCHDESCRIPTION",
+				"type": "VARCHAR",
+				"precision": 144,
+				"scale": 0
+			},
+			{
+				"name": "CHINESEDESCRIPTION",
+				"type": "VARCHAR",
+				"precision": 144,
+				"scale": 0
+			},
+			{
+				"name": "ARABICDESCRIPTION",
+				"type": "VARCHAR",
+				"precision": 144,
+				"scale": 0
+			},
+			{
+				"name": "HEBREWDESCRIPTION",
+				"type": "VARCHAR",
+				"precision": 144,
+				"scale": 0
+			},
+			{
+				"name": "THAIDESCRIPTION",
+				"type": "VARCHAR",
+				"precision": 144,
+				"scale": 0
+			},
+			{
+				"name": "GERMANDESCRIPTION",
+				"type": "VARCHAR",
+				"precision": 144,
+				"scale": 0
+			},
+			{
+				"name": "JAPANESEDESCRIPTION",
+				"type": "VARCHAR",
+				"precision": 144,
+				"scale": 0
+			},
+			{
+				"name": "TURKISHDESCRIPTION",
+				"type": "VARCHAR",
+				"precision": 144,
+				"scale": 0
+			},
+			{
+				"name": "STARTDATE",
+				"type": "TIMESTAMP_NTZ",
+				"precision": 29,
+				"scale": 9
+			},
+			{
+				"name": "ENDDATE",
+				"type": "TIMESTAMP_NTZ",
+				"precision": 29,
+				"scale": 9
+			},
+			{
+				"name": "STATUS",
+				"type": "VARCHAR",
+				"precision": 7,
+				"scale": 0
+			}
+		],
+		"typeProperties": {
+			"schema": "DBO",
+			"table": "DIMPRODUCT"
+		}
+	}
+}
