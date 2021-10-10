@@ -19,8 +19,8 @@
 						"referenceName": "CustomerLakeDS",
 						"type": "DatasetReference",
 						"parameters": {
-							"container": "karthiccontainer",
-							"folder": "inputfeed",
+							"folder": "karthiccontainer",
+							"container": "inputfeed",
 							"file": "*.csv"
 						}
 					},

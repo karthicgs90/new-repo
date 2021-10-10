@@ -6,10 +6,10 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"container": {
+			"folder": {
 				"type": "string"
 			},
-			"folder": {
+			"container": {
 				"type": "string"
 			},
 			"file": {
