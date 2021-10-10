@@ -444,6 +444,10 @@
 							"typeProperties": {
 								"source": {
 									"type": "SnowflakeSource",
+									"query": {
+										"value": "@insert  dbo.fileinformation \n (child_items,\n Exits ,\n item_name,\n item_type,\n Last_modified )\nselect 'customer.csv' , 'true','customer.csv','csv',utcnow()",
+										"type": "Expression"
+									},
 									"exportSettings": {
 										"type": "SnowflakeExportCopyCommand"
 									}
