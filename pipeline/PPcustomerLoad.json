@@ -17,10 +17,28 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "CustomerLakeDS",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"folder": {
+								"value": "@pipeline().parameters.folder",
+								"type": "Expression"
+							},
+							"container": {
+								"value": "@pipeline().parameters.container",
+								"type": "Expression"
+							},
+							"file": {
+								"value": "@pipeline().parameters.files",
+								"type": "Expression"
+							}
+						}
 					},
 					"fieldList": [
-						"childItems"
+						"childItems",
+						"exists",
+						"itemName",
+						"itemType",
+						"lastModified"
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
