@@ -19,7 +19,7 @@
 						"referenceName": "CustomerLakeDS",
 						"type": "DatasetReference",
 						"parameters": {
-							"FolderPath": "karthiccontainer / inputfeed"
+							"container": "karthiccontainer / inputfeed"
 						}
 					},
 					"fieldList": [
