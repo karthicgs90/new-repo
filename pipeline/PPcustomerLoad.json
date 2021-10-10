@@ -70,7 +70,38 @@
 					"isSequential": true,
 					"activities": [
 						{
-							"name": "Lookup1",
+							"name": "Wait1",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 1
+							}
+						}
+					]
+				}
+			},
+			{
+				"name": "ForEach1_copy1",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "ForEach1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Get Metadata1').output.childitems",
+						"type": "Expression"
+					},
+					"isSequential": true,
+					"activities": [
+						{
+							"name": "Lookup1_copy1",
 							"type": "Lookup",
 							"dependsOn": [],
 							"policy": {
