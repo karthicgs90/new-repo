@@ -17,13 +17,13 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "CustomerLakeDS",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"FolderPath": "karthiccontainer / inputfeed"
+						}
 					},
 					"fieldList": [
-						"exists",
-						"itemName",
-						"itemType",
-						"lastModified"
+						"childItems"
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
