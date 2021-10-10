@@ -114,7 +114,7 @@
 			},
 			"files": {
 				"type": "string",
-				"defaultValue": "*.csv"
+				"defaultValue": "*.txt"
 			}
 		},
 		"annotations": []
