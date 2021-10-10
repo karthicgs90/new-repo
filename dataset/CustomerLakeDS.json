@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "Dim*.csv",
 				"folderPath": "inputfeed",
 				"fileSystem": "karthiccontainer"
 			},
