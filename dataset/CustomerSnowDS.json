@@ -5,6 +5,14 @@
 			"referenceName": "Snowflake1",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"domain": {
+				"type": "string"
+			},
+			"dbname": {
+				"type": "string"
+			}
+		},
 		"folder": {
 			"name": "snowflakeDS"
 		},
@@ -188,7 +196,7 @@
 		],
 		"typeProperties": {
 			"schema": "DBO",
-			"table": "DIMCUSTOMER"
+			"table": "FILEINFORMATION"
 		}
 	}
 }
