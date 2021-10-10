@@ -17,12 +17,7 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "CustomerLakeDS",
-						"type": "DatasetReference",
-						"parameters": {
-							"folder": "karthiccontainer",
-							"container": "inputfeed",
-							"file": "*.csv"
-						}
+						"type": "DatasetReference"
 					},
 					"fieldList": [
 						"childItems"
@@ -90,6 +85,17 @@
 				}
 			}
 		],
+		"parameters": {
+			"container": {
+				"type": "string"
+			},
+			"folder": {
+				"type": "string"
+			},
+			"files": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
