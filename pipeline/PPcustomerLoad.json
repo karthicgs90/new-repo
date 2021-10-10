@@ -87,13 +87,16 @@
 		],
 		"parameters": {
 			"container": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "karthiccontainer"
 			},
 			"folder": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "inputfeed"
 			},
 			"files": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "*.csv"
 			}
 		},
 		"annotations": []
