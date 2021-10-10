@@ -80,7 +80,20 @@
 								"secureOutput": false,
 								"secureInput": false
 							},
-							"userProperties": [],
+							"userProperties": [
+								{
+									"name": "folder",
+									"value": "inputfeed"
+								},
+								{
+									"name": "container",
+									"value": "karthiccontainer"
+								},
+								{
+									"name": "files",
+									"value": "*.*"
+								}
+							],
 							"typeProperties": {
 								"source": {
 									"type": "DelimitedTextSource",
