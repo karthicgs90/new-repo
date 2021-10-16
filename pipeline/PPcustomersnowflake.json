@@ -375,10 +375,12 @@
 				"defaultValue": "DimCustomer.csv"
 			},
 			"domain": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "karthic-elastic-pool.database.windows.net"
 			},
 			"dbname": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "karthic-test-cust-db"
 			}
 		},
 		"folder": {
