@@ -27,14 +27,9 @@
 						}
 					},
 					"sink": {
-						"type": "SnowflakeSink",
-						"preCopyScript": {
-							"value": "truncate table dbo.dimcustomer",
-							"type": "Expression"
-						},
-						"importSettings": {
-							"type": "SnowflakeImportCopyCommand"
-						}
+						"type": "AzureSqlSink",
+						"preCopyScript": "truncate table Dbo.DimCustomer",
+						"disableMetricsCollection": false
 					},
 					"enableStaging": false
 				},
@@ -60,18 +55,8 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "CustomerSnowDS",
-						"type": "DatasetReference",
-						"parameters": {
-							"domain": {
-								"value": "@pipeline().parameters.domain",
-								"type": "Expression"
-							},
-							"dbname": {
-								"value": "@pipeline().parameters.dbname",
-								"type": "Expression"
-							}
-						}
+						"referenceName": "AzureSqlTable1",
+						"type": "DatasetReference"
 					}
 				]
 			}
