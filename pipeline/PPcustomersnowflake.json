@@ -371,7 +371,8 @@
 				"defaultValue": "karthiccontainer"
 			},
 			"file": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "DimCustomer.csv"
 			}
 		},
 		"folder": {
