@@ -5,17 +5,6 @@
 			"referenceName": "sqlLinkedService",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"tablename": {
-				"type": "string"
-			},
-			"domainname": {
-				"type": "string"
-			},
-			"dbname": {
-				"type": "string"
-			}
-		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [],
