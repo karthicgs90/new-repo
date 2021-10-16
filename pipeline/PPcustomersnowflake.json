@@ -373,6 +373,12 @@
 			"file": {
 				"type": "string",
 				"defaultValue": "DimCustomer.csv"
+			},
+			"domain": {
+				"type": "string"
+			},
+			"dbname": {
+				"type": "string"
 			}
 		},
 		"folder": {
