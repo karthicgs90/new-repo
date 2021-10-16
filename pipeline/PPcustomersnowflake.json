@@ -336,7 +336,21 @@
 				"inputs": [
 					{
 						"referenceName": "CustomerLakeDS",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"folder": {
+								"value": "@pipeline().parameters.folder",
+								"type": "Expression"
+							},
+							"container": {
+								"value": "@pipeline().parameters.container",
+								"type": "Expression"
+							},
+							"file": {
+								"value": "@pipeline().parameters.file",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
@@ -347,6 +361,19 @@
 				]
 			}
 		],
+		"parameters": {
+			"folder": {
+				"type": "string",
+				"defaultValue": "inputfeed"
+			},
+			"container": {
+				"type": "string",
+				"defaultValue": "karthiccontainer"
+			},
+			"file": {
+				"type": "string"
+			}
+		},
 		"folder": {
 			"name": "snowflakedb"
 		},
