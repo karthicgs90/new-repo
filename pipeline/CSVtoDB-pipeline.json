@@ -1,0 +1,9 @@
+{
+	"name": "CSVtoDB-pipeline",
+	"properties": {
+		"folder": {
+			"name": "oct16-pipeline"
+		},
+		"annotations": []
+	}
+}
