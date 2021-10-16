@@ -65,9 +65,14 @@
 							"typeProperties": {
 								"source": {
 									"type": "AzureSqlSource",
-									"sqlReaderQuery": {
-										"value": "@concat('select * from [dbo].[DimCustomer] where EnglishOccupation =',concat(',item().EnglishOccupation,'))",
-										"type": "Expression"
+									"sqlReaderStoredProcedureName": "[dbo].[spEnglishOccupation]",
+									"storedProcedureParameters": {
+										"EnglishOccupation": {
+											"value": {
+												"value": "@item().EnglishOccupation",
+												"type": "Expression"
+											}
+										}
 									},
 									"queryTimeout": "02:00:00",
 									"partitionOption": "None"
