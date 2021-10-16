@@ -66,7 +66,7 @@
 								"source": {
 									"type": "AzureSqlSource",
 									"sqlReaderQuery": {
-										"value": "@concat(\n'select * from [dbo].[DimCustomer] where EnglishOccupation =',concat(''',item().EnglishOccupation,'''))",
+										"value": "@concat('select * from [dbo].[DimCustomer] where EnglishOccupation =',concat(',item().EnglishOccupation,'))",
 										"type": "Expression"
 									},
 									"queryTimeout": "02:00:00",
