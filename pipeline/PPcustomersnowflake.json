@@ -356,7 +356,17 @@
 				"outputs": [
 					{
 						"referenceName": "CustomerSnowDS",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"domain": {
+								"value": "@pipeline().parameters.domain",
+								"type": "Expression"
+							},
+							"dbname": {
+								"value": "@pipeline().parameters.dbname",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
