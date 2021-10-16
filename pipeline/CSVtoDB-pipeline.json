@@ -65,6 +65,10 @@
 							"typeProperties": {
 								"source": {
 									"type": "AzureSqlSource",
+									"sqlReaderQuery": {
+										"value": "select * from [dbo].[DimCustomer] where EnglishOccupation = @(item(),EnglishOccupation);\nselect 1;",
+										"type": "Expression"
+									},
 									"queryTimeout": "02:00:00",
 									"partitionOption": "None"
 								},
