@@ -1,0 +1,17 @@
+{
+	"name": "onPremSQLlinkedservice",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=DESKTOP-KAOOHHO;initial catalog=AdventureWorks2019",
+			"userName": "DESKTOP-KAOOHHO\\karth",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIyZGUwY2VjYS01MjRhLTQyYmItYjllOC1hNjYzYjY0MzM3ZDkiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "self-hosted-runtime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
