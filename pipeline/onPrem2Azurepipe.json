@@ -1,0 +1,9 @@
+{
+	"name": "onPrem2Azurepipe",
+	"properties": {
+		"folder": {
+			"name": "oct16-pipeline"
+		},
+		"annotations": []
+	}
+}
