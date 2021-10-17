@@ -13,8 +13,33 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
+				"userProperties": [
+					{
+						"name": "container"
+					},
+					{
+						"name": "folder"
+					},
+					{
+						"name": "file"
+					}
+				],
 				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"dataset": {
+						"referenceName": "SourceOutputfeed",
+						"type": "DatasetReference"
+					},
 					"firstRowOnly": false
 				}
 			}

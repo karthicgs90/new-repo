@@ -1,0 +1,22 @@
+{
+	"name": "SourceOutputfeed",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "outfeedstorageLinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "outputfeed",
+				"fileSystem": "karthiccontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
