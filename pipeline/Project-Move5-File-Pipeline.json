@@ -1,6 +1,50 @@
 {
 	"name": "Project-Move5-File-Pipeline",
 	"properties": {
+		"activities": [
+			{
+				"name": "Lookup1",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"firstRowOnly": false
+				}
+			}
+		],
+		"parameters": {
+			"container": {
+				"type": "string"
+			},
+			"Folder": {
+				"type": "string"
+			},
+			"File": {
+				"type": "string"
+			},
+			"ArchiveFolder": {
+				"type": "string"
+			},
+			"ErrorFolder": {
+				"type": "string"
+			},
+			"dbconnection": {
+				"type": "string"
+			},
+			"dbname": {
+				"type": "string"
+			},
+			"dbtable": {
+				"type": "string"
+			}
+		},
 		"folder": {
 			"name": "oct16-pipeline"
 		},
