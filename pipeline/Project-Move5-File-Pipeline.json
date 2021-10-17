@@ -21,19 +21,23 @@
 		],
 		"parameters": {
 			"container": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "karthiccontainer"
 			},
 			"Folder": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "outputfeed"
 			},
 			"File": {
 				"type": "string"
 			},
 			"ArchiveFolder": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "archievefeed"
 			},
 			"ErrorFolder": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "errorfeed"
 			},
 			"dbconnection": {
 				"type": "string"
