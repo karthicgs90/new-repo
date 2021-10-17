@@ -10,10 +10,11 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "*.csv",
 				"folderPath": "outputfeed",
 				"fileSystem": "karthiccontainer"
 			},
-			"columnDelimiter": ",",
+			"columnDelimiter": "|",
 			"escapeChar": "\\",
 			"quoteChar": "\""
 		},
