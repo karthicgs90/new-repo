@@ -27,10 +27,7 @@
 								"value": "@pipeline().parameters.Folder",
 								"type": "Expression"
 							},
-							"file": {
-								"value": "*.csv",
-								"type": "Expression"
-							}
+							"file": "*.csv"
 						}
 					},
 					"fieldList": [
