@@ -17,10 +17,20 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "SourceOutputfeed",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"container": {
+								"value": "@pipeline().parameters.container",
+								"type": "Expression"
+							},
+							"folder": {
+								"value": "@pipeline().parameters.Folder",
+								"type": "Expression"
+							},
+							"file": "*.csv"
+						}
 					},
 					"fieldList": [
-						"childItems",
 						"exists",
 						"itemName",
 						"itemType",
