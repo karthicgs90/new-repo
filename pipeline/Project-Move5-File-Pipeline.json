@@ -481,7 +481,22 @@
 								"secureOutput": false,
 								"secureInput": false
 							},
-							"userProperties": []
+							"userProperties": [],
+							"typeProperties": {
+								"source": {
+									"type": "AzureSqlSource",
+									"sqlReaderQuery": {
+										"value": "truncate table dbo.customer;",
+										"type": "Expression"
+									},
+									"queryTimeout": "02:00:00",
+									"partitionOption": "None"
+								},
+								"dataset": {
+									"referenceName": "sinkSQLtable",
+									"type": "DatasetReference"
+								}
+							}
 						}
 					]
 				}
