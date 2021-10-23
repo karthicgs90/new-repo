@@ -526,7 +526,8 @@
 				"defaultValue": "outputfeed"
 			},
 			"File": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "*.csv"
 			},
 			"ArchiveFolder": {
 				"type": "string",
