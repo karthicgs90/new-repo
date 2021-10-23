@@ -153,7 +153,11 @@
 						"partitionOption": "None"
 					},
 					"sink": {
-						"type": "SqlServerSink"
+						"type": "SqlServerSink",
+						"preCopyScript": {
+							"value": "truncate table dbo.Customer;",
+							"type": "Expression"
+						}
 					},
 					"enableStaging": false,
 					"translator": {
