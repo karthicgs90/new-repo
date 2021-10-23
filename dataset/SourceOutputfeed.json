@@ -10,10 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": {
-					"value": "clerical.csv",
-					"type": "Expression"
-				},
+				"fileName": "clerical.csv",
 				"folderPath": "outputfeed",
 				"fileSystem": "karthiccontainer"
 			},
