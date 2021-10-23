@@ -26,10 +26,6 @@
 							"folder": {
 								"value": "@pipeline().parameters.Folder",
 								"type": "Expression"
-							},
-							"file": {
-								"value": "@pipeline().parameters.File",
-								"type": "Expression"
 							}
 						}
 					},
@@ -529,8 +525,7 @@
 				"defaultValue": "outputfeed"
 			},
 			"File": {
-				"type": "string",
-				"defaultValue": "*.csv"
+				"type": "string"
 			},
 			"ArchiveFolder": {
 				"type": "string",
