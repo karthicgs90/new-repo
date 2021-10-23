@@ -295,7 +295,7 @@
 											"type": "Expression"
 										},
 										"folder": {
-											"value": "@pipeline().parameters.ArchiveFolder",
+											"value": "@pipeline().parameters.ErrorFolder",
 											"type": "Expression"
 										},
 										"file": {
