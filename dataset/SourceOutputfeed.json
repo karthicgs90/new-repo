@@ -11,7 +11,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "*.csv",
+					"value": "clerical.csv",
 					"type": "Expression"
 				},
 				"folderPath": "outputfeed",
@@ -19,6 +19,7 @@
 			},
 			"columnDelimiter": "|",
 			"escapeChar": "\\",
+			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
 		"schema": []
