@@ -47,7 +47,7 @@
 				"type": "ForEach",
 				"dependsOn": [
 					{
-						"activity": "If Condition1",
+						"activity": "If Condition",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -463,7 +463,7 @@
 				]
 			},
 			{
-				"name": "If Condition1",
+				"name": "If Condition",
 				"type": "IfCondition",
 				"dependsOn": [
 					{
@@ -476,7 +476,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
-						"value": "@activity('Get Metadata1').output.exists",
+						"value": "@greater(length(activity('Get Metadata1').output.childItems),0)",
 						"type": "Expression"
 					},
 					"ifTrueActivities": [
@@ -496,7 +496,7 @@
 								"source": {
 									"type": "AzureSqlSource",
 									"sqlReaderQuery": {
-										"value": "truncate table dbo.customer;",
+										"value": "truncate table dbo.customer;\nselect 1;",
 										"type": "Expression"
 									},
 									"queryTimeout": "02:00:00",
