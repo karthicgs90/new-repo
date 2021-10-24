@@ -499,13 +499,22 @@
 										"value": {
 											"value": "@pipeline().Pipeline",
 											"type": "Expression"
-										}
+										},
+										"type": "String"
 									},
 									"runtime": {
 										"value": {
 											"value": "@pipeline().RunId",
 											"type": "Expression"
-										}
+										},
+										"type": "String"
+									},
+									"message": {
+										"value": {
+											"value": "\"file does not exists\"",
+											"type": "Expression"
+										},
+										"type": "String"
 									}
 								}
 							},
