@@ -22,8 +22,25 @@
 			{
 				"name": "Fail1",
 				"type": "Fail",
-				"dependsOn": [],
-				"userProperties": []
+				"dependsOn": [
+					{
+						"activity": "RestAPI",
+						"dependencyConditions": [
+							"Failed"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"message": {
+						"value": "@activity('RestAPI').error.message",
+						"type": "Expression"
+					},
+					"errorCode": {
+						"value": "1234",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"annotations": []
