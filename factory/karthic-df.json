@@ -1,0 +1,9 @@
+{
+	"name": "karthic-df",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "7587021a-684e-489e-9e3a-4ff9a8e0b7b5",
+		"tenantId": "273be0c9-fa1a-47b7-83e0-95dcc29c6a78"
+	}
+}
